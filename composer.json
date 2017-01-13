@@ -29,6 +29,5 @@
   },
   "config": {
     "bin-dir": "bin"
-  },
-  "target-dir": "Nixilla/HipchatBundle"
+  }
 }
