@@ -1,0 +1,4 @@
+services:
+    hipchat.notifier:
+        class: Nixilla\HipchatBundle\Service\HipchatNotifier
+        arguments: ["@buzz", "%hipchat.domain%", "%hipchat.token%", "%hipchat.room%" ]

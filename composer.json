@@ -1,0 +1,34 @@
+{
+  "name": "nixilla/hipchat-bundle",
+  "type": "symfony-bundle",
+  "description": "Provides simple hipchat notification service - requires Buzz",
+  "keywords": [
+    "hipchat"
+  ],
+  "homepage": "https://github.com/nixilla/hipchat-bundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Janusz Slota",
+      "email": "janusz.slota@nixilla.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "symfony/framework-bundle": "~2.3|~3.0",
+    "twig/twig": "^1.24",
+    "sensio/buzz-bundle": "^1.1"
+  },
+  "require-dev": {
+    "phpspec/phpspec": "^3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Nixilla\\HipchatBundle\\": "src/"
+    }
+  },
+  "config": {
+    "bin-dir": "bin"
+  },
+  "target-dir": "Nixilla/HipchatBundle"
+}
