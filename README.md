@@ -8,33 +8,62 @@ Very basic and simple Hipchat integration.
 
 Install with composer:
 
-```#!bash
+```bash
 composer require nixilla/hipchat-bundle
 ```
 
 Add budle to AppKernel:
 
-```
+```php
 <?php
-new Nixilla\HipchatBundle\NixillaHipchatBundle(),
+
+// app/AppKernel.php
+
+class AppKernel extends Kernel
+{
+    public function registerBundles()
+    {
+        $bundles = [
+            // other bundles here,
+            new Nixilla\HipchatBundle\NixillaHipchatBundle()
+        ];
+        
+        return $bundles;
+    }
+}
 ```
 
 Configure parameters.yml:
 
-    hipchat.token: tbc
-    hipchat.room: tbc
-    hipchat.domain: tbc
+```yaml
+hipchat.token: tbc
+hipchat.room: tbc
+hipchat.domain: tbc
+```
+
 
 ## Usage
 
 Inject hipchat service in to your service:
 
-    your.service:
-        class: \YourClass
-        arguments: [ "@hipchat.notifier" ]
+```yaml
+your.service:
+    class: \YourClass
+    arguments: [ "@hipchat.notifier" ]
+```
 
 Use in your class:
 
-```#!php
-$this->hipchat->notify();
+```php
+<?php
+
+class YourClass
+{
+    private $hipchat; // inject it via constructor
+    
+    public function yourMethod()
+    {
+        $this->hipchat->notify($colour = 'red', $message = 'Hello', $format = 'text', $notify = false);        
+    }
+}
 ```
