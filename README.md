@@ -1,6 +1,7 @@
-# hipchat-bundle for Symfony
+# Hipchat Bundle for Symfony
 
-Very basic and simple Hipchat integration.
+Very basic and simple Hipchat integration. Currently it only provides notification to single room.
+But if you would like to extend it please feel free to send pull request.
 
 [![Build Status](https://travis-ci.org/nixilla/hipchat-bundle.svg?branch=master)](https://travis-ci.org/nixilla/hipchat-bundle)
 [![Coverage Status](https://coveralls.io/repos/github/nixilla/hipchat-bundle/badge.svg)](https://coveralls.io/github/nixilla/hipchat-bundle)
