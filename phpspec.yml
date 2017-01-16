@@ -2,3 +2,11 @@ suites:
     default:
         namespace: Nixilla\HipchatBundle
         psr4_prefix: Nixilla\HipchatBundle
+
+extensions:
+  PhpSpecCodeCoverage\CodeCoverageExtension:
+    blacklist: [ 'spec', 'vendor' ]
+    format:
+      - clover
+    output:
+      clover: build/logs/clover.xml

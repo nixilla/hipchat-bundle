@@ -3,6 +3,7 @@
 Very basic and simple Hipchat integration.
 
 [![Build Status](https://travis-ci.org/nixilla/hipchat-bundle.svg?branch=master)](https://travis-ci.org/nixilla/hipchat-bundle)
+[![Coverage Status](https://coveralls.io/repos/github/nixilla/hipchat-bundle/badge.svg)](https://coveralls.io/github/nixilla/hipchat-bundle)
 
 ## Installation
 
