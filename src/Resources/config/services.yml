@@ -3,3 +3,9 @@ services:
     hipchat.notifier:
         class: Nixilla\HipchatBundle\Service\HipchatNotifier
         arguments: ["@buzz", "%hipchat.domain%", "%hipchat.token%", "%hipchat.room%" ]
+
+    command.hipchat.test:
+        class: Nixilla\HipchatBundle\Command\TestCommand
+        arguments: [ "@hipchat.notifier" ]
+        tags:
+            -  { name: console.command }
